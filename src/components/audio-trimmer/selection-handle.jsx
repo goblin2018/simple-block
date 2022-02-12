@@ -1,0 +1,24 @@
+import React from 'react';
+import classNames from 'classnames';
+import Box from '../box/box.jsx';
+import styles from './audio-trimmer.css';
+import handleIcon from './icon--handle.svg';
+
+const SelectionHandle = props => (
+    <Box
+        className={classNames(styles.trimLine, props.handleStyle)}
+        onMouseDown={props.onMouseDown}
+        onTouchStart={props.onMouseDown}
+    >
+        <Box className={classNames(styles.trimHandle, styles.topTrimHandle)}>
+            <img src={handleIcon} />
+        </Box>
+        <Box className={classNames(styles.trimHandle, styles.bottomTrimHandle)}>
+            <img src={handleIcon} />
+        </Box>
+    </Box>
+);
+
+
+
+export default SelectionHandle;
